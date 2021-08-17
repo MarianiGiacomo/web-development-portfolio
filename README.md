@@ -18,17 +18,55 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+To configure the text, profile picture, and links displayed in the portfolio, you to configure the files under `/data`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Example of `data/index.js`
+```
+import firstApp from  './webapps/first-app'
+import secondApp from './webapps/second-app'
+import thirdApp from './webapps/third-app'
+import fourthApp from './webapps/fourth-app'
+import articles from './publications
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+const firstName = 'Firstname'
+const lastName = 'Lastname'
 
-## Deploy on Vercel
+export default {
+	firstName,
+	lastName,
+	gitHub: 'https//yourgithubprofile',
+	twitter: 'https//yourtwitterprofile',
+	linkedin: 'https://yourlinkedinprofile',
+	email: 'your@email',
+	blog: 'https//yourblog',
+  // Displayed on the homepage
+	profileImg: {
+		src: '/images/profile.png', 
+		width: 150,
+		height: 150
+	},
+  // The text displayed in the homepage near your profile picture
+	home: {
+		heading: `Hi!, I am ${firstName} ${lastName}.`,
+		intro: `This is my web development portfolio`
+	},
+  // The projects to show
+  // Configure them under dat/webapps/your-app.js
+  // and import them on top of this file
+	webApps: { 
+		'first-app': firstApp,
+		'second-app': secondApp,
+		'third-app': thirdApp,
+		'fourth-app': fourthApp
+	},
+	publications: {
+  // The intro text displayed in the publications page
+		intro: `Here are my publications`,
+    // The publications configured under data/publications/index.js
+		articles,
+	}
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
