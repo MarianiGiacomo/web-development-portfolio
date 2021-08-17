@@ -10,11 +10,11 @@ const lastName = 'Lastname'
 export default {
 	firstName,
 	lastName,
-	gitHub: '',
-	twitter: '',
-	linkedin: '',
-	email: '',
-	blog: '',
+	gitHub: 'https://github.com',
+	twitter: 'https://twitter.com',
+	linkedin: 'https://linkedin.com',
+	email: 'your@email.com',
+	blog: '/',
 	profileImg: {
 		src: '/images/profile.png', 
 		width: 150,
