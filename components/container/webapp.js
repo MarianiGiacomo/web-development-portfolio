@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types'
 import Tag from '../presentational/tag'
 import Anchor from '../presentational/anchor'
+import Image from 'next/image'
 
 const WebApp = ({ data }) => {
 	return (
 		<>
 			{
 				data.img?
-					<img 
+				<div className="rounded-lg border border-perla lg:w-3/5 lg:m-auto mb-5 p-3" >
+					<Image 
 						width={data.img.width?? ''} 
 						height={data.img?.height?? ''} 
 						src={data.img.src?? ''}
 						alt={data.img.alt?? ''}
-						className="rounded-lg border border-perla lg:w-3/5 lg:m-auto mb-5 p-3"
 					/>
+				</div>
 					: ''
 			}
 			<h1 className="text-2xl font-medium mb-1 mt-4">{data.title?? ''}</h1>
