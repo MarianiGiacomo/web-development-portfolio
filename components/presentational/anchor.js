@@ -6,7 +6,7 @@ const Anchor = ({ href, newWindow, classes, children }) => {
 			href={href} 
 			target={newWindow? '_blank' : '_self'}
 			rel="noopener noreferrer"	
-			className={`text-turchese underline ${classes?? ''}`}
+			className={`text-turquoise underline ${classes?? ''}`}
 		>
 			{ children }	
 		</a>

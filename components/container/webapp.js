@@ -8,7 +8,7 @@ const WebApp = ({ data }) => {
 		<>
 			{
 				data.img?
-				<div className="rounded-lg border border-perla lg:w-3/5 lg:m-auto mb-5 p-3" >
+				<div className="rounded-lg border border-pearl lg:w-3/5 lg:m-auto mb-5 p-3" >
 					<Image 
 						width={data.img.width?? ''} 
 						height={data.img?.height?? ''} 
@@ -45,11 +45,13 @@ const WebApp = ({ data }) => {
 							<ol>
 							{ 
 								Object.entries(data.links).map((l, i) => {
-									return <li key={i} >
-										<Anchor href={l[1]} newWindow>
-											{l[0]}
-										</Anchor>
+									return (
+										<li key={i} >
+											<a href={l[1]} target="_blank" rel="noopener noreferrer">
+												{l[0]}
+											</a>
 										</li>
+									)
 								})
 							}
 							</ol>

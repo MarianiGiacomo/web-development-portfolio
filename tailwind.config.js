@@ -9,11 +9,11 @@ module.exports = {
 			padding: '2rem',
     },
 		colors: {
-			perla: '#f3f3f3',
+			pearl: '#f3f3f3',
 			'light-mint': '#a5e2e2',
 			mint: '#2bc9c8',
 			marine: '#2ba2c8',
-			turchese: '#2574a9'
+			turquoise: '#2574a9'
 		},
     extend: {},
   },

@@ -1,5 +1,4 @@
 import Layout from '../../components/container/layout'
-import Anchor from '../../components/presentational/anchor'
 
 import data from '../../data'
 import { boldName } from '../../helpers'
@@ -16,13 +15,11 @@ export default function Publications() {
 					{
 						publications.articles.map( (p, i) => {
 							return (
-								<div key={i} className="mt-3">
-								<li>
-									<Anchor href={p.url} newWindow>
+								<li key={i} className="mt-3">
+									<a href={p.url} target="_blank" rel="noopener noreferrer">
 										{ boldName(p.title, firstName, lastName)}
-									</Anchor>
+									</a>
 								</li>
-								</div>
 							)
 						})
 					}
