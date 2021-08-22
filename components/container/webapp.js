@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import Tag from '../presentational/tag'
-import Anchor from '../presentational/anchor'
 import Image from 'next/image'
 
 const WebApp = ({ data }) => {
